@@ -116,7 +116,7 @@ async function main() {
           // check if already added to history
           if (item.details.passwordHistory.find((searchItem) => {
             searchItem.value == newHistoryItem.value && searchItem.time == newHistoryItem.time
-          }))
+          })) continue;
   
           item.details.passwordHistory.push(newHistoryItem);
         }
